@@ -1,5 +1,2 @@
-# debugger
-json.partial! 'api/guests/guest', guest: @guest
-json.gifts do
-    @guest.gifts
-end
+json.partial! 'guest', guest: @guest
+json.gifts @guest.gifts, :title, :description
